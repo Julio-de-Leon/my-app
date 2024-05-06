@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <div>
+      <div>Email</div>
+      <input id="toInput"/>
+    </div>
+    <div>
+      <div>Subject</div>
+      <input id="subjectInput" />
+    </div>
+    <div>
+      <div>Body</div>
+      <input id="bodyInput" />
+    </div>
+    <div>
+      <div>ccEmail</div>
+      <input id="ccEmailInput" />
+    </div>
+    <div>
+      <div>bccEMail</div>
+      <input id="bccEmailInput" />
+    </div>
+    <br/>
+    <div>
+      <div>Select Attachment</div>
+      <input id="attachment" type="file" accept=".pdf" />
+      <input hidden id="attachmentInput" />
+    </div>
+    <br/>
+    <div>
+      <button id="btn" type="button">Create Email</button>
+    </div>
+    <script>
+      document.getElementById('attachment').addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        const hiddenInput = document.getElementById('attachmentInput');
+        hiddenInput.value = file.path
+      });
+    </script>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
