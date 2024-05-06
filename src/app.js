@@ -26,7 +26,7 @@ var edge = require('electron-edge-js');
 // });
 
 exports.invokeCreateOutlook = function (window, {toEmail, body, subject, ccEmail, bccEmail, attachment}) {
-    console.log(toEmail, 'fuck yeah')
+    console.log(toEmail, 'Hello')
     // createOutlook({toEmail, body, subject, ccEmail, bccEmail, attachment}, function(error, result) {
     //     if (error) throw error;
     //     window.webContents.send("fromMain", 'createOutlook', result);
