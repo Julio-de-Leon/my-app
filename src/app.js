@@ -1,6 +1,7 @@
 const { ipcMain} = require("electron");
 const path = require('path');
-var net = process.argv[1].replace('--', '');
+// var net = process.argv[1].replace('--', '');
+var net = 'core'
 // var namespace = 'QuickStart.' + net.charAt(0).toUpperCase() + net.substr(1);
 var namespace = 'QuickStart.' + 'Core';
 if(net === 'core') net = '';
